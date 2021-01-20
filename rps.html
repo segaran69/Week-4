@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+</head>
+<body>
+	<h1>Rock Paper Scissors</h1>
+	<button onclick="weaponClicked('Rock')">Rock</button>
+	<button onclick="weaponClicked('Paper')">Paper</button>
+	<button onclick="weaponClicked('Scissors')">Scissors</button>
+	<script type="text/javascript">
+		var myScore = 0; 
+		var compScore = 0;
+
+		function weaponClicked(myWeapon) {
+		var weapons = ["Rock","Paper","Scissors"];
+		var compWeapon = weapons [Math.floor(Math.random()* weapons.length)];
+		if (myWeapon == "Rock"){
+			if (compWeapon== "Rock"){
+				alert("Computer select " + compWeapon+". It's a Draw! Current Score, You "+myScore + " :Computer"+compScore);
+				}
+			} else if (compWeapon == "Paper"){
+				compScore++;
+				alert("Computer select " + compWeapon+". You Lose! Current Score, You "+myScore + " :Computer"+compScore);
+			} else {
+				myScore++;
+					alert("Computer select " + compWeapon+".You Win!. Current Score, You "+myScore + " :Computer"+compScore);
+			}
+		} 
+
+		else if (weapon == "Paper"){
+			if (compWeapon == "Paper"){
+				alert("Computer select " + compWeapon+".It's a Draw");
+			} 
+			else if (compWeapon=="Scissors "){
+				compScore++;
+				alert("Computer select " + compWeapon+". You Lose! Current Score, You "+myScore + " :Computer"+compScore);
+			}
+			else {
+				myScore++;
+					alert("Computer select " + compWeapon+".It's a Win!. Current Score, You "+myScore + " :Computer"+compScore);
+			}
+		} 
+		else {
+			if (compWeapon == "Paper"){
+				compScore++;
+				alert("Computer select " + compWeapon+".You Lose! Current Score, You "+myScore + " :Computer"+compScore);
+			}
+			else if (compWeapon=="Scissors"){
+				myScore++;
+				alert("Computer select " + compWeapon+". You Win!. Current Score, You "+myScore + " :Computer"+compScore);
+			}
+			else {
+				alert("Computer select " + compWeapon+". It's a Draw!");
+			}
+		} 	
+
+</script>
+</body>
+</html>
